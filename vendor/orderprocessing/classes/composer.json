@@ -1,0 +1,22 @@
+{
+    "name": "orderprocessing/classes",
+    "type": "library",
+    "description": "Common Container Interface (PHP FIG PSR-11)",
+    "keywords": [],
+    "homepage": "https://github.com/php-fig/container",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PHP-FIG",
+            "homepage": "https://www.php-fig.org/"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OrderProcessing\\Classes\\": "classes/"
+        }
+    }
+}

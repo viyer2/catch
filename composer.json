@@ -1,0 +1,16 @@
+{
+    "require": {
+        "symfony/console": "^5.3"
+    },
+
+    "autoload": {
+         "psr-4": {
+             "Console\\": "src"
+         },
+         "psr-0": { "Console\\App\\Classes": "src/" },
+         "classmap": ["src"]
+     },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.34"
+    }
+}
