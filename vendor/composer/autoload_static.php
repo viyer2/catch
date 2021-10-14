@@ -228,6 +228,7 @@ class ComposerStaticInit1066d8c0d0c89310c8768df47529b2e8
         'Console\\App\\Classes\\OrderDecoderJsonl' => __DIR__ . '/../..' . '/src/App/Classes/OrderDecoderJsonl.php',
         'Console\\App\\Classes\\OutputWriterFactory' => __DIR__ . '/../..' . '/src/App/Classes/OutputWriterFactory.php',
         'Console\\App\\Classes\\ResponseParser' => __DIR__ . '/../..' . '/src/App/Classes/ResponseParser.php',
+        'Console\\App\\Classes\\WriterInterface' => __DIR__ . '/../..' . '/src/App/Classes/WriterInterface.php',
         'Console\\App\\Commands\\OrderParserCommand' => __DIR__ . '/../..' . '/src/App/Commands/OrderParserCommand.php',
         'Console\\App\\Commands\\UrldownloaderCommand' => __DIR__ . '/../..' . '/src/App/Commands/UrldownloaderCommand.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
@@ -236,7 +237,6 @@ class ComposerStaticInit1066d8c0d0c89310c8768df47529b2e8
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
-        'WriterInterface' => __DIR__ . '/../..' . '/src/App/Interfaces/WriterInterface.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

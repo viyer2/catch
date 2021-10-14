@@ -19,17 +19,25 @@ class OrderParserCommand extends Command
         $this->setName('order-parser')
             ->setDescription('Downloads a JSON file from a given URL and parses it and produces output')
             ->setHelp('Downloads a file from agiven URL')
-            ->addArgument('url', InputArgument::REQUIRED, 'Pass the URL')
-            ->addArgument('email', InputArgument::OPTIONAL, 'Email this report to ...')
-            ->addArgument('outputFormat', InputArgument::OPTIONAL, 'CSV, XML, YAML. Default is CSV');
+            ->addOption('url','u' ,InputArgument::REQUIRED, 'Pass the URL')
+						->addOption('path','p',InputArgument::OPTIONAL, 'Write my output file to.. Defaults to /tmp/' )
+						->addOption('output','o',InputArgument::OPTIONAL, 'Name of the output file .. Defaults to output.csv')
+            ->addOption('email','e',InputArgument::OPTIONAL, 'Email this report to ...')
+            ->addOption('outputFormat','f' ,InputArgument::OPTIONAL, 'CSV/YAML. Default is CSV');
     }
 
 	protected function execute(InputInterface $input, OutputInterface $output)
     {
       //$downloader   = new CurlDownloader('https://s3-ap-southeast-2.amazonaws.com/catch-code-challenge/challenge-1/orders.jsonl', '/tmp/');
-      $downloader = new CurlDownloader($input->getArgument('url'),'/tmp/');
-      $errorFile    =  OutputWriterFactory::getWriter("CSV");
-      $outputWriter  = OutputWriterFactory::getWriter("CSV");
+		   $path = $input->getArgument('path');
+			 $path =isset($path) ? $path :'/tmp/';
+			 $outputFormat = $input->getArgument('outputFormat');
+			 $outputFormat = isset($outputFormat) ? $outputFormat:'CSV';
+
+
+      $downloader = new CurlDownloader($input->getArgument('url', $path));
+      $errorFile    =  OutputWriterFactory::getWriter("CSV"); //Will write only csv
+      $outputWriter  = OutputWriterFactory::getWriter($outputFormat);
 
       $outputWriter->setFileName('/tmp/output.csv');
       $errorFile->setFilename('/tmp/errors.csv');
@@ -44,7 +52,7 @@ class OrderParserCommand extends Command
 
           ));
 
-      } catch (Exception $exception) {
+      } catch (\Exception $exception) {
           echo $exception->getMessage();
       }
       finally {

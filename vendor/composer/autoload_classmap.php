@@ -16,6 +16,7 @@ return array(
     'Console\\App\\Classes\\OrderDecoderJsonl' => $baseDir . '/src/App/Classes/OrderDecoderJsonl.php',
     'Console\\App\\Classes\\OutputWriterFactory' => $baseDir . '/src/App/Classes/OutputWriterFactory.php',
     'Console\\App\\Classes\\ResponseParser' => $baseDir . '/src/App/Classes/ResponseParser.php',
+    'Console\\App\\Classes\\WriterInterface' => $baseDir . '/src/App/Classes/WriterInterface.php',
     'Console\\App\\Commands\\OrderParserCommand' => $baseDir . '/src/App/Commands/OrderParserCommand.php',
     'Console\\App\\Commands\\UrldownloaderCommand' => $baseDir . '/src/App/Commands/UrldownloaderCommand.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
@@ -24,5 +25,4 @@ return array(
     'Stringable' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
     'UnhandledMatchError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
     'ValueError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
-    'WriterInterface' => $baseDir . '/src/App/Interfaces/WriterInterface.php',
 );
