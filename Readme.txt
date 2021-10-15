@@ -12,4 +12,5 @@ Feedback is critical as it will  help me improve as a developer.
 
 I never shy away from a challenge
 This is the first time I have worked with the symfony framework.
+I picked the first tutorial on youtube and attempted this.
 My solution may look amateurish. My apologies for that.

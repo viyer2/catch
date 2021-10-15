@@ -36,7 +36,7 @@ class ResponseParser
                     $prams->{'errorFile'}->writeRecord($order->errorMessage());
                 } else {
                     $validOrders += 1;
-                    if ($recCounter ==1) {
+                    if ($recCounter ==1 ) {
                         $params['outputWriter']->writeHeader($order->returnHeading());
                     }
                     $params['outputWriter']->writeRecord($order->getReturnFields());

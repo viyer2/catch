@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd8e3998799db7e59e27cb7478666295add87f94c',
+        'reference' => '870470ad338640778f814a87b52cf3b8fb226904',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd8e3998799db7e59e27cb7478666295add87f94c',
+            'reference' => '870470ad338640778f814a87b52cf3b8fb226904',
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
@@ -372,6 +372,15 @@
             'aliases' => array(),
             'reference' => 'a7604de14bcf472fe8e33f758e9e5b7bf07d3b91',
             'dev_requirement' => true,
+        ),
+        'symfony/yaml' => array(
+            'pretty_version' => 'v5.3.6',
+            'version' => '5.3.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/yaml',
+            'aliases' => array(),
+            'reference' => '4500fe63dc9c6ffc32d3b1cb0448c329f9c814b7',
+            'dev_requirement' => false,
         ),
     ),
 );
